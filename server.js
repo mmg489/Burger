@@ -24,7 +24,7 @@ app.engine('handlebars',expressHBS({
 
 app.set('view engine', 'handlebars');
 
-app.use(express.static(path.join(_dirname,'public')));
+app.use(express.static(path.join(_dirname + '/public')));
 
 // Import routes and give the server access to them.
 var routes = require('./controllers/burgers_controller.js');
