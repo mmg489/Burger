@@ -6,7 +6,7 @@ var methodOverride = require('method-override');
 var path = require('path');
 
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3306;
 
 // Serves static content for the app from the "public" directory in the application directory
 
