@@ -17,7 +17,10 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Set Handlebars 
-
+app.use(methodOR('_method'));
+app.engine('handlebars',expressHBS({
+    defaultLayout:'main'
+}));
 
 // Import routes and give the server access to them.
 
