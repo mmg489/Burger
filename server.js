@@ -1,14 +1,20 @@
+//dependencies 
 var express = require('express');
+var bodyParser = require('body-parser');
+var expressHBS = require('express-handlebars');
+var methodOR = require('method-override');
+var path = require('path');
 
+var app = express();
 var PORT = process.env.PORT || 8080;
-
-var app = express ();
 
 // Serves static content for the app from the "public" directory in the application directory
 
 
 //Parse application body as JSON
-
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
 // Set Handlebars 
 
