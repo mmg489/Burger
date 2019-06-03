@@ -2,7 +2,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var expressHBS = require('express-handlebars');
-var methodOR = require('method-override');
+var methodOverride = require('method-override');
 var path = require('path');
 
 var app = express();
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Set Handlebars 
-app.use(methodOR('_method'));
+app.use(methodOverride('_method'));
 app.engine('handlebars',expressHBS({
     defaultLayout:'main'
 }));
