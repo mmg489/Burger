@@ -1,37 +1,32 @@
-//dependencies 
 var express = require('express');
 var bodyParser = require('body-parser');
-var expressHBS = require('express-handlebars');
+var exphbs = require('express-handlebars');
 var methodOverride = require('method-override');
 var path = require('path');
 
 var app = express();
-var PORT = process.env.PORT || 3306;
-
-// Serves static content for the app from the "public" directory in the application directory
+var PORT = process.env.PORT || 3000;
 
 
-//Parse application body as JSON
 app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-// Set Handlebars 
 app.use(methodOverride('_method'));
-app.engine('handlebars',expressHBS({
-    defaultLayout:'main'
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main'
 }));
 
 app.set('view engine', 'handlebars');
 
-app.use(express.static(path.join(__dirname + 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Import routes and give the server access to them.
+//linking controller route
 var routes = require('./controllers/burgers_controller.js');
+
 app.use(routes);
 
-//Start server so that it can begin listening to client requests.
- //Log (server-side) when server has started
-app.listen(PORT, function(){
-    console.log("Server listening on: http://localhost:" + PORT);
+//Listening to PORT
+app.listen(PORT, function () {
+    console.log("Server listening  on: http://localhost:" + PORT);
 });

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <h1> Order*A*Burger</h1>
+        <h1>ORDER A BURGER</h1>
     </div>
     <div>
         <div class="row">
@@ -10,14 +10,14 @@
         <div>
             <pre>{{this.id}}. {{this.burger_name}}</pre>
         </div>
-        <form method="POST" action = "/burgers/update?_method=PUT">
+        <form method="POST" action="/burgers/update?_method=PUT">
             <input type="hidden" name="burger_id" type="text" value={{this.id}}>
-            <button type ="submit" class="submit-btn">D*E*V*O*U*R*</button>
+            <button type="submit" class="submit-btn">DEVOUR</button>
         </form>
     </div>
     {{/unless}}
     {{/each}}
-</div><br><br>
+</div> <br><br>
 
 <!--Devoured-->
 <div class="sec-col">
@@ -28,13 +28,12 @@
     {{/each}}
 </div>
 
-<!--POST-->
-<p>Order a Burger!</p>
+<!--Post-->
+<p>Order A Burger</p>
 <div class="container">
-    <form method="POST" action="/burgers/create" >
+    <form action="/burgers/create" method="POST">
         <input type="text" name="burger_name" class="form-control" value="" id="enter">
-        <button type="submit" id="submit-input">SUBMIT</button>
+        <button type="submit" id="submit-input">Submit</button>
     </form>
 
-    
 </div>
