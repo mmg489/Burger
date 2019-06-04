@@ -19,7 +19,7 @@ app.engine('handlebars', exphbs({
 
 app.set('view engine', 'handlebars');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/public'));
 
 //linking controller route
 var routes = require('./controllers/burgers_controller.js');
