@@ -1,12 +1,12 @@
-#Devour the Burger!
+<h1>Devour the Burger!</h1>
 
 Visit the live demo here: https://burger489.herokuapp.com/
 
-##This app makes use of: Node Express Handlebars
+<h2>This app makes use of: Node Express Handlebars</h2>
 
--A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Uses Node and MySQL to query and route data in your app, and Handlebars to generate HTML.
+-A burger logger with MySQL, Node, Express, Handlebars and an ORM. Uses Node and MySQL to query and route data in your app, and Handlebars to generate HTML.
 
-####How it works:
+<h4>How it works:</h4>
 
 This is an app that lets users input the names of burgers they'd like to eat.
 
